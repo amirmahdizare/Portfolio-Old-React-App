@@ -1,13 +1,12 @@
 import React from 'react';
+import { Container } from '@mui/material';
 import { AppRouter } from './route/AppRouter';
 
 function App() {
   return (
-    <div className="App">
+    <Container maxWidth='xl'>
       <AppRouter />
-      <header className="App-header">
-      </header>
-    </div>
+    </Container>
   );
 }
 
