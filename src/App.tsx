@@ -1,12 +1,17 @@
 import React from 'react';
-import { Container } from '@mui/material';
+import { Container, ThemeProvider } from '@mui/material';
 import { AppRouter } from './route/AppRouter';
+import 'App.css'
+import { lightTheme } from './style/lightTheme';
 
 function App() {
+  console.log(lightTheme)
   return (
-    <Container maxWidth='xl'>
-      <AppRouter />
-    </Container>
+    <ThemeProvider theme={lightTheme}>
+      <Container maxWidth='xl'>
+        <AppRouter />
+      </Container>
+    </ThemeProvider>
   );
 }
 
