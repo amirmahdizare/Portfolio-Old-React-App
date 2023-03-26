@@ -12,6 +12,7 @@ export const Desktop = () => {
         { name: 'Projects', url: '#' },
         { name: 'Work Experince', url: '#' },
         { name: 'Skills', url: '#' },
+        { name: 'Education', url: '#' },
     ]
 
     useEffect(() => {
@@ -35,7 +36,7 @@ export const Desktop = () => {
                     <Typography fontWeight={'500'} color={'yellow.main'} fontSize={18}>Amir Mahdi Keshan Zare </Typography>
                 </Box>
 
-                <Box sx={{ display: 'flex', flexDirection: "row", justifyContent: 'space-evenly', flex: 0.4, alignItems: 'center' }}>
+                <Box sx={{ display: 'flex', flexDirection: "row", justifyContent: 'space-evenly', flex: 0.55, alignItems: 'center' }}>
                     {menuItems.map((item, index) => <>
                         {!!index && <Typography color={'yellow.main'}>|</Typography>}
                         <Link text={item.name} href={item.url} />
