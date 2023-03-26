@@ -7,7 +7,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
     return (
         <Container maxWidth='xl' >
             <Header />
-            <Box mt={{ xs: 8, lg: 4 }}></Box>
+            {/* <Box mt={{ xs: 8, lg: 4 }}></Box> */}
             {children}
         </Container>
     )
