@@ -18,7 +18,7 @@ export const HomePage = () => {
 
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: { xs: 'flex-start', md: 'center' }, height: '100%' ,p:{md:4} }}>
 
-                    <Typography align='left' variant='h3' gutterBottom sx={{ width: { xs: '70%', lg: 'unset', lineHeight: '3rem' } }}>Amir Mahdi Keshan Zare</Typography>
+                    <Typography align='left' variant='h3' gutterBottom sx={{ width: { xs: '70%', lg: 'unset', lineHeight: '4rem' } }} color='yellow.main'>Hi !I am Amir Mahdi Keshan Zare</Typography>
 
                     <Typography align='left' variant='h4' gutterBottom >Front End Developer</Typography>
 
