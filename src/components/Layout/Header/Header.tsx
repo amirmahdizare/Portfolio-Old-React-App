@@ -1,16 +1,12 @@
 import React from 'react'
-import { Avatar, Box } from '@mui/material'
+import { Box } from '@mui/material'
 import { Resposive } from './components/Resposive'
-
-
-
-
-
-
+import { Desktop } from './components/Desktop'
 
 export const Header = () => {
     return (
         <Box component={'header'}>
+            <Desktop />
             <Resposive />
         </Box>
     )
