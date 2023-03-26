@@ -5,7 +5,7 @@ import { Call, Download, GitHub, LinkedIn } from '@mui/icons-material'
 import { Link } from 'components'
 
 export const Desktop = () => {
-    const [mode, setMode] = useState<'sticky' | 'normal'>('normal')
+    const [mode, setMode] = useState<'sticky' | 'normal' | undefined>()
 
     const headerRef = useRef<HTMLInputElement>()
     const menuItems = [
@@ -23,11 +23,15 @@ export const Desktop = () => {
     });
 
 
-    const isSticky = (e: Event) => {
+    const isSticky = () => {
         const scrollTop = window.scrollY;
+        // setMode('sticky')
         scrollTop >= 10 ? setMode('sticky') : setMode('normal');
     };
 
+    useEffect(() => isSticky(), [])
+
+    console.log(headerRef.current?.getBoundingClientRect())
     return (
         <>
             <Box sx={{ display: { xs: 'none', lg: 'flex' }, justifyContent: 'space-between', px: 2, py: 1.5, position: mode == 'sticky' ? 'fixed' : 'fixed', top: 0, width: '100%', maxWidth: '1440px', transition: 'all ease 0.4s', backgroundColor: '#080E09', boxSizing: 'border-box', zIndex: 1000, boxShadow: mode == 'sticky' ? '0px  1px #F6E71D' : '' }} ref={headerRef}>
@@ -64,7 +68,7 @@ export const Desktop = () => {
                 </Box>
             </Box>
 
-            <Box className='Injaaa' height={mode == 'normal' ? headerRef.current?.getBoundingClientRect().height + 'px' : 0} sx={{transition:'all ease 0.2s'}} />
+            <Box className='Injaaa' height={'70px'} sx={{ transition: 'all ease 0.2s' }} />
         </>
     )
 }
